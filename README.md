@@ -13,3 +13,7 @@ yarn add firebase
 ```
 
 Set the firebase data as local environment variables creating a `.env.local` file.
+
+To apply styles use plane CSS or SASS `yarn add node-sass@^5.0.0`
+
+To navigate between the different pages use the React Router Dom `yarn add react-router-dom` and the types with development dependence `yarn add @types/react-router-dom -D`
