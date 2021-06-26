@@ -1,8 +1,8 @@
-# docker-compose up -d 
+# docker-compose up -d
 # docker-compose exec app /bin/sh
 # docker-compose run --rm app
 
-version: '3.7'
+version: "3.7"
 services:
   app:
     image: node:lts-alpine
@@ -11,8 +11,10 @@ services:
     user: node
     ports:
       - "3000:3000"
-    expose: 
+      - "9005:9005"
+    expose:
       - "3000"
+      - "9005"
     entrypoint: /bin/sh -c ./.docker/entrypoint.sh
     volumes:
       - .:/home/node/workspace
@@ -22,5 +24,5 @@ services:
       - PATH=/home/node/workspace/letmeask/node_modules/.bin:$PATH
     stdin_open: true
     tty: true
-# volumes: 
+# volumes:
 #   notused:

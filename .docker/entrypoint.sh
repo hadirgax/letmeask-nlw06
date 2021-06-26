@@ -11,6 +11,10 @@
 
 cd letmeask
 
+# install Firebase tools to deploy
+export PATH="$(yarn global bin):$PATH"
+yarn global add firebase-tools
+
 yarn install
 
 yarn start
